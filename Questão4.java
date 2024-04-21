@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
-    private static int[] voos = new int[5];
-    private static String[] origens = new String[5];
-    private static String[] destinos = new String[5];
-    private static int[] lugares = new int[5];
+    private static int[] voos = new int[12];
+    private static String[] origens = new String[12];
+    private static String[] destinos = new String[12];
+    private static int[] lugares = new int[12];
     private static Scanner sc = new Scanner(System.in);
 
 
@@ -48,11 +48,18 @@ public class Main {
     }
 
     private static void inicializarDados() {
-        for (int i = 0; i < 5; i++) {
-            voos[i] = 1 + i;
-            origens[i] = "Origem " + (i + 1);
-            destinos[i] = "Destino " + (i + 1);
-            lugares[i] = 100;
+        for (int i = 0; i < 12; i++) {
+            System.out.println("Digite o numero do voo numero " + (i + 1) + ":");
+            voos[i] = sc.nextInt();
+            
+            System.out.println("Digite o nome do origem numero " + (i + 1) + ":");
+            origens[i] = sc.next();
+            
+            System.out.println("Digite o nome do destino numero " + (i + 1) + ":");
+            destinos[i] = sc.next();
+            
+            System.out.println("Digite a quatidade de lugares do voo numero " + (i + 1) + ":");
+            lugares[i] = sc.nextInt();
         }
     }
 
